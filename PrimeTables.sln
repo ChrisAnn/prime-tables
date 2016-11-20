@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeTables", "src\PrimeTables\PrimeTables.csproj", "{D79EEE97-8ED0-42AC-83C6-C0D7141CA520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeTables.Test", "src\PrimeTables.Test\PrimeTables.Test.csproj", "{5A245E3A-C1C7-41B2-B5C9-AC6FA438280E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D79EEE97-8ED0-42AC-83C6-C0D7141CA520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79EEE97-8ED0-42AC-83C6-C0D7141CA520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79EEE97-8ED0-42AC-83C6-C0D7141CA520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79EEE97-8ED0-42AC-83C6-C0D7141CA520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A245E3A-C1C7-41B2-B5C9-AC6FA438280E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A245E3A-C1C7-41B2-B5C9-AC6FA438280E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A245E3A-C1C7-41B2-B5C9-AC6FA438280E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A245E3A-C1C7-41B2-B5C9-AC6FA438280E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
