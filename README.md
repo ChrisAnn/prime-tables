@@ -4,9 +4,10 @@
 
 ## How to run
 Requires .Net 4.6.1
+
 1. Build in Visual Studio (built with Community 2015)
-2. Ensure the project PrimeTables is set as Startup, then hit F5 to run the Console app.
-3. Instructions will tell you to enter a number, then press return.
+1. Ensure the project PrimeTables is set as Startup, then hit F5 to run the Console app.
+1. Instructions will tell you to enter a number, then press return.
 
 I'm pleased with the implementation of the Eratosthenes Sieve, a nice simple algorithm for finding small to medium primes.  
 Would have liked to have added file output as the larger grids display poorly on the console.
