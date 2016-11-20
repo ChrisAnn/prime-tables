@@ -15,6 +15,7 @@ namespace PrimeTables
             if (!int.TryParse(readLine, out size) || size < 1)
             {
                 Console.WriteLine("Not a valid integer.");
+                Console.ReadLine();
                 return;
             }
 
@@ -24,6 +25,7 @@ namespace PrimeTables
             var primes = EratosthenesSieve.SievePrimes(estimatedPrimeAtSize);
 
             PrintGrid(primes.Take(size).ToList());
+            Console.ReadLine();
         }
 
         private static int EstimatePrimeAtN(int n)
@@ -40,10 +42,10 @@ namespace PrimeTables
         {
             for (var row = 0; row <= primes.Count; row++)
             {
-                var rowString = row == 0 ? "|    |" : $"|{primes[row-1], 3} |";
+                var rowString = row == 0 ? "|      |" : $"|{primes[row-1], 5} |";
                 foreach (var column in primes)
                 {
-                    rowString += row == 0 ? $"{column, 3} |" : $"{primes[row - 1] * column, 3} |";
+                    rowString += row == 0 ? $"{column, 5} |" : $"{primes[row - 1] * column, 5} |";
                 }
                 Console.WriteLine(rowString);
             }
