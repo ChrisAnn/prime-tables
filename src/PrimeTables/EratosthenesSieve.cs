@@ -30,7 +30,7 @@ namespace PrimeTables
             {
                 if (!isPrime[i]) continue;
 
-                for (var j = i*2; j < max; j += i)
+                for (var j = i*2; j <= max; j += i)
                 {
                     isPrime[j] = false;
                 }
