@@ -8,15 +8,17 @@ namespace PrimeTables.Test
     public class ProgramTest
     {
         [Test]
-        public void ValidateConsoleOutput()
+        public void AcceptsIntForTableSize()
         {
-            using (StringWriter sw = new StringWriter())
+            using (var sw = new StringWriter())
+            using (var sr = new StringReader("3\r\n"))
             {
                 Console.SetOut(sw);
+                Console.SetIn(sr);
 
-                Program.Main(null);
+                Program.Main(new string[] { });
 
-                string expected = $"Hello, world!{Environment.NewLine}";
+                const string expected = "Enter Table Size:\r\nTable Size: 3\r\n";
                 Assert.That(sw.ToString(), Is.EqualTo(expected));
             }
         }

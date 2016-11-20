@@ -10,7 +10,9 @@ namespace PrimeTables
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, world!");
+            Console.WriteLine("Enter Table Size:");
+            var tableSize = Console.ReadLine();
+            Console.WriteLine($"Table Size: {tableSize}");
         }
     }
 }
