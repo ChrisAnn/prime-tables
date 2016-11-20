@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PrimeTables
 {
@@ -11,7 +7,15 @@ namespace PrimeTables
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter Table Size:");
-            var tableSize = Console.ReadLine();
+            var readLine = Console.ReadLine();
+
+            int tableSize;
+            if (!int.TryParse(readLine, out tableSize))
+            {
+                Console.WriteLine("Not a valid integer.");
+                return;
+            }
+
             Console.WriteLine($"Table Size: {tableSize}");
         }
     }

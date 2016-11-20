@@ -22,5 +22,21 @@ namespace PrimeTables.Test
                 Assert.That(sw.ToString(), Is.EqualTo(expected));
             }
         }
+
+        [Test]
+        public void RejectsNonIntForTableSize()
+        {
+            using (var sw = new StringWriter())
+            using (var sr = new StringReader("three\r\n"))
+            {
+                Console.SetOut(sw);
+                Console.SetIn(sr);
+
+                Program.Main(new string[] { });
+
+                const string expected = "Enter Table Size:\r\nNot a valid integer.\r\n";
+                Assert.That(sw.ToString(), Is.EqualTo(expected));
+            }
+        }
     }
 }
