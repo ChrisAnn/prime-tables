@@ -10,7 +10,7 @@ namespace PrimeTables
             var readLine = Console.ReadLine();
 
             int tableSize;
-            if (!int.TryParse(readLine, out tableSize))
+            if (!int.TryParse(readLine, out tableSize) || tableSize < 1)
             {
                 Console.WriteLine("Not a valid integer.");
                 return;

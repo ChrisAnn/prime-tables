@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
 
 namespace PrimeTables.Test
 {
@@ -29,6 +28,22 @@ namespace PrimeTables.Test
         {
             using (var sw = new StringWriter())
             using (var sr = new StringReader("three\r\n"))
+            {
+                Console.SetOut(sw);
+                Console.SetIn(sr);
+
+                Program.Main(new string[] { });
+
+                const string expected = "Enter Table Size:\r\nNot a valid integer.\r\n";
+                Assert.That(sw.ToString(), Is.EqualTo(expected));
+            }
+        }
+
+        [Test]
+        public void RejectsIntLessThanOneForTableSize()
+        {
+            using (var sw = new StringWriter())
+            using (var sr = new StringReader("0\r\n"))
             {
                 Console.SetOut(sw);
                 Console.SetIn(sr);
