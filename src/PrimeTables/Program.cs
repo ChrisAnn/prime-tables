@@ -19,7 +19,7 @@ namespace PrimeTables
                 return;
             }
 
-            Console.WriteLine($"Table Size: {size}");
+            Console.WriteLine("Table Size: {0}", size);
 
             var estimatedPrimeAtSize = EstimatePrimeAtN(size);
             var primes = EratosthenesSieve.SievePrimes(estimatedPrimeAtSize);
@@ -42,10 +42,12 @@ namespace PrimeTables
         {
             for (var row = 0; row <= primes.Count; row++)
             {
-                var rowString = row == 0 ? "|      |" : $"|{primes[row-1], 5} |";
+                var rowString = row == 0 ? "|      |" : string.Format("|{0,5} |", primes[row - 1]);
+
                 foreach (var column in primes)
                 {
-                    rowString += row == 0 ? $"{column, 5} |" : $"{primes[row - 1] * column, 5} |";
+                    rowString += row == 0 ? string.Format("{0,5} |", column) : string.Format("{0,5} |",
+                        primes[row - 1] * column);
                 }
                 Console.WriteLine(rowString);
             }
